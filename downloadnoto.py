@@ -130,17 +130,17 @@ def writeCSS():
   src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/''' + fontfilename + "'" + ''')
 }
   '''
-    with open('aksharamukh-notomirror.css', 'w') as f:
+    with open('aksharamukha-notomirror.css', 'w') as f:
       f.write(cssContent)
-    with open('aksharamukh-notomirror-merged.css', 'w') as f:
-      f.write(cssContent)
+    with open('aksharamukha-notomirror-merged.css', 'w') as f:
+      f.write(cssContentMerged)
 
 print('Starting font download')
-downloadFiles()
+#downloadFiles()
 print('Font download complete')
 
 print('Starting font merging')
-mergeFiles()
+#mergeFiles()
 print('Font merging complete')
 
 print('Creating CSS file')
