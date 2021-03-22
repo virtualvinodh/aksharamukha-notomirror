@@ -38,6 +38,7 @@ fontlist = [
   'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMalayalam/NotoSansMalayalam-Regular.ttf?raw=true',
   'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMarchen/NotoSansMarchen-Regular.ttf?raw=true',
   'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMasaramGondi/NotoSansMasaramGondi-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMeeteiMayek/NotoSansMeeteiMayek-Regular.ttf?raw=true',
   'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansModi/NotoSansModi-Regular.ttf?raw=true',
   'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMro/NotoSansMro-Regular.ttf?raw=true',
   'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMultani/NotoSansMultani-Regular.ttf?raw=true',
@@ -136,11 +137,11 @@ def writeCSS():
       f.write(cssContentMerged)
 
 print('Starting font download')
-#downloadFiles()
+downloadFiles()
 print('Font download complete')
 
 print('Starting font merging')
-#mergeFiles()
+mergeFiles()
 print('Font merging complete')
 
 print('Creating CSS file')

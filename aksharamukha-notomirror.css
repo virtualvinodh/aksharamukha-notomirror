@@ -175,6 +175,11 @@
 }
   
 @font-face {
+  font-family: 'Noto Sans MeeteiMayek';
+  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/NotoSansMeeteiMayek-Regular.ttf')
+}
+  
+@font-face {
   font-family: 'Noto Sans Modi';
   src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/NotoSansModi-Regular.ttf')
 }
