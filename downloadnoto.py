@@ -82,7 +82,27 @@ fontlist = [
   'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSerifKhmer/NotoSerifKhmer-Regular.ttf?raw=true',
   'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSerifTibetan/NotoSerifTibetan-Regular.ttf?raw=true',
   'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSerifHebrew/NotoSerifHebrew-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSerifKhojki/NotoSerifKhojki-Regular.ttf?raw=true'
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSerifKhojki/NotoSerifKhojki-Regular.ttf?raw=true',
+
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansUgaritic/NotoSansUgaritic-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansSyriac/NotoSansSyriac-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansSogdian/NotoSansSogdian-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansOldSogdian/NotoSansOldSogdian-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansOldSouthArabian/NotoSansOldSouthArabian-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansSamaritan/NotoSansSamaritan-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansInscriptionalParthian/NotoSansInscriptionalParthian-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansPhoenician/NotoSansPhoenician-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansPsalterPahlavi/NotoSansPsalterPahlavi-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansInscriptionalPahlavi/NotoSansInscriptionalPahlavi-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansPalmyrene/NotoSansPalmyrene-Regular.ttf?raw=true',
+
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansNabataean/NotoSansNabataean-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansOldNorthArabian/NotoSansOldNorthArabian-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansManichaean/NotoSansManichaean-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansHatran/NotoSansHatran-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansElymaic/NotoSansElymaic-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansEgyptianHieroglyphs/NotoSansEgyptianHieroglyphs-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansImperialAramaic/NotoSansImperialAramaic-Regular.ttf?raw=true'
 ]
 
 
