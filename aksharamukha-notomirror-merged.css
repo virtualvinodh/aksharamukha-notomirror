@@ -200,6 +200,11 @@
 }
   
 @font-face {
+  font-family: 'Noto Sans Nandinagari ';
+  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansNandinagari-Regular.ttf')
+}
+  
+@font-face {
   font-family: 'Noto Sans NewTaiLue ';
   src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansNewTaiLue-Regular.ttf')
 }

@@ -43,6 +43,7 @@ fontlist = [
   'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMro/NotoSansMro-Regular.ttf?raw=true',
   'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMultani/NotoSansMultani-Regular.ttf?raw=true',
   'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMyanmar/NotoSansMyanmar-Regular.ttf?raw=true',
+  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansNandinagari/NotoSansNandinagari-Regular.ttf?raw=true',
   'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansNewTaiLue/NotoSansNewTaiLue-Regular.ttf?raw=true',
   'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansNewa/NotoSansNewa-Regular.ttf?raw=true',
   'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansOlChiki/NotoSansOlChiki-Regular.ttf?raw=true',
@@ -111,9 +112,15 @@ def downloadFiles():
     fontname = font.split('/')[-1].replace('?raw=true', '')
     print('Downloading ' + fontname + ' ' + str(len(fontlist) - i))
 
-    r = requests.get(font)
-    with open('./' + fontname, 'wb') as f:
-      f.write(r.content)
+    if 'Nastaliq' in font:
+      try:
+          r = requests.get(font)
+      except Exception:
+        print(i)
+
+      import time
+      with open('./' + fontname, 'wb') as f:
+        f.write(r.content)
 
 def mergeFiles():
   merger = mg.Merger()
@@ -161,10 +168,10 @@ downloadFiles()
 print('Font download complete')
 
 print('Starting font merging')
-mergeFiles()
+#mergeFiles()
 print('Font merging complete')
 
 print('Creating CSS file')
-writeCSS()
+#writeCSS()
 print('Creating CSS file complete')
 
