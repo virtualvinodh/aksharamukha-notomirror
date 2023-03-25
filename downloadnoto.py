@@ -2,108 +2,109 @@ import re
 import requests
 import fontTools.merge as mg
 
+#(?<=')(.*?)(/ttf/)(.*?)(/.*?)(?=')
+#https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/$3/hinted/ttf/$3-Regular.ttf
+
 fontlist = [
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoNastaliqUrdu/NotoNastaliqUrdu-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSans/NotoSans-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansAvestan/NotoSansAvestan-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansBalinese/NotoSansBalinese-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansBatak/NotoSansBatak-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansBengali/NotoSansBengali-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansBhaiksuki/NotoSansBhaiksuki-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansBrahmi/NotoSansBrahmi-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansBuginese/NotoSansBuginese-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansBuhid/NotoSansBuhid-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansChakma/NotoSansChakma-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansCham/NotoSansCham-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansDevanagari/NotoSansDevanagari-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansGrantha/NotoSansGrantha-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansGujarati/NotoSansGujarati-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansGunjalaGondi/NotoSansGunjalaGondi-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansGurmukhi/NotoSansGurmukhi-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansHanifiRohingya/NotoSansHanifiRohingya-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansHanunoo/NotoSansHanunoo-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansJavanese/NotoSansJavanese-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansKaithi/NotoSansKaithi-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansKannada/NotoSansKannada-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansKayahLi/NotoSansKayahLi-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansKharoshthi/NotoSansKharoshthi-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansKhmer/NotoSansKhmer-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansKhojki/NotoSansKhojki-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansKhudawadi/NotoSansKhudawadi-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansLao/NotoSansLao-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansLepcha/NotoSansLepcha-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansLimbu/NotoSansLimbu-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansLisu/NotoSansLisu-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMahajani/NotoSansMahajani-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMalayalam/NotoSansMalayalam-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMarchen/NotoSansMarchen-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMasaramGondi/NotoSansMasaramGondi-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMeeteiMayek/NotoSansMeeteiMayek-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansModi/NotoSansModi-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMro/NotoSansMro-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMultani/NotoSansMultani-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansMyanmar/NotoSansMyanmar-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansNandinagari/NotoSansNandinagari-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansNewTaiLue/NotoSansNewTaiLue-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansNewa/NotoSansNewa-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansOlChiki/NotoSansOlChiki-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansOldPersian/NotoSansOldPersian-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansOriya/NotoSansOriya-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansPhagsPa/NotoSansPhagsPa-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansRejang/NotoSansRejang-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansSaurashtra/NotoSansSaurashtra-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansSharada/NotoSansSharada-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansSiddham/NotoSansSiddham-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansSinhala/NotoSansSinhala-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansSoraSompeng/NotoSansSoraSompeng-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansSoyombo/NotoSansSoyombo-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansSundanese/NotoSansSundanese-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansSylotiNagri/NotoSansSylotiNagri-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansSyriac/NotoSansSyriac-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansTagalog/NotoSansTagalog-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansTagbanwa/NotoSansTagbanwa-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansTaiLe/NotoSansTaiLe-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansTaiTham/NotoSansTaiTham-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansTaiViet/NotoSansTaiViet-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansTakri/NotoSansTakri-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansTamil/NotoSansTamil-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansTelugu/NotoSansTelugu-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansThaana/NotoSansThaana-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansThai/NotoSansThai-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansTirhuta/NotoSansTirhuta-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansWancho/NotoSansWancho-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansWarangCiti/NotoSansWarangCiti-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansZanabazarSquare/NotoSansZanabazarSquare-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSerif/NotoSerif-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSerifAhom/NotoSerifAhom-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSerifBalinese/NotoSerifBalinese-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSerifDogra/NotoSerifDogra-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSerifGrantha/NotoSerifGrantha-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSerifGujarati/NotoSerifGujarati-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSerifKhmer/NotoSerifKhmer-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSerifTibetan/NotoSerifTibetan-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSerifHebrew/NotoSerifHebrew-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSerifKhojki/NotoSerifKhojki-Regular.ttf?raw=true',
-
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansUgaritic/NotoSansUgaritic-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansSyriac/NotoSansSyriac-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansSogdian/NotoSansSogdian-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansOldSogdian/NotoSansOldSogdian-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansOldSouthArabian/NotoSansOldSouthArabian-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansSamaritan/NotoSansSamaritan-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansInscriptionalParthian/NotoSansInscriptionalParthian-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansPhoenician/NotoSansPhoenician-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansPsalterPahlavi/NotoSansPsalterPahlavi-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansInscriptionalPahlavi/NotoSansInscriptionalPahlavi-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansPalmyrene/NotoSansPalmyrene-Regular.ttf?raw=true',
-
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansNabataean/NotoSansNabataean-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansOldNorthArabian/NotoSansOldNorthArabian-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansManichaean/NotoSansManichaean-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansHatran/NotoSansHatran-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansElymaic/NotoSansElymaic-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansEgyptianHieroglyphs/NotoSansEgyptianHieroglyphs-Regular.ttf?raw=true',
-  'https://github.com/googlefonts/noto-fonts/blob/main/hinted/ttf/NotoSansImperialAramaic/NotoSansImperialAramaic-Regular.ttf?raw=true'
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoNastaliqUrdu/hinted/ttf/NotoNastaliqUrdu-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSans/hinted/ttf/NotoSans-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansAvestan/hinted/ttf/NotoSansAvestan-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansBalinese/hinted/ttf/NotoSansBalinese-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansBatak/hinted/ttf/NotoSansBatak-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansBengali/hinted/ttf/NotoSansBengali-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansBhaiksuki/hinted/ttf/NotoSansBhaiksuki-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansBrahmi/hinted/ttf/NotoSansBrahmi-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansBuginese/hinted/ttf/NotoSansBuginese-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansBuhid/hinted/ttf/NotoSansBuhid-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansChakma/hinted/ttf/NotoSansChakma-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansCham/hinted/ttf/NotoSansCham-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansDevanagari/hinted/ttf/NotoSansDevanagari-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansGrantha/hinted/ttf/NotoSansGrantha-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansGujarati/hinted/ttf/NotoSansGujarati-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansGunjalaGondi/hinted/ttf/NotoSansGunjalaGondi-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansGurmukhi/hinted/ttf/NotoSansGurmukhi-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansHanifiRohingya/hinted/ttf/NotoSansHanifiRohingya-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansHanunoo/hinted/ttf/NotoSansHanunoo-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansJavanese/hinted/ttf/NotoSansJavanese-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansKaithi/hinted/ttf/NotoSansKaithi-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansKannada/hinted/ttf/NotoSansKannada-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansKayahLi/hinted/ttf/NotoSansKayahLi-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansKharoshthi/hinted/ttf/NotoSansKharoshthi-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansKhmer/hinted/ttf/NotoSansKhmer-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansKhojki/hinted/ttf/NotoSansKhojki-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansKhudawadi/hinted/ttf/NotoSansKhudawadi-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansLao/hinted/ttf/NotoSansLao-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansLepcha/hinted/ttf/NotoSansLepcha-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansLimbu/hinted/ttf/NotoSansLimbu-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansLisu/hinted/ttf/NotoSansLisu-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMahajani/hinted/ttf/NotoSansMahajani-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMalayalam/hinted/ttf/NotoSansMalayalam-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMarchen/hinted/ttf/NotoSansMarchen-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMasaramGondi/hinted/ttf/NotoSansMasaramGondi-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMeeteiMayek/hinted/ttf/NotoSansMeeteiMayek-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansModi/hinted/ttf/NotoSansModi-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMro/hinted/ttf/NotoSansMro-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMultani/hinted/ttf/NotoSansMultani-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMyanmar/hinted/ttf/NotoSansMyanmar-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansNandinagari/hinted/ttf/NotoSansNandinagari-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansNewTaiLue/hinted/ttf/NotoSansNewTaiLue-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansNewa/hinted/ttf/NotoSansNewa-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansOlChiki/hinted/ttf/NotoSansOlChiki-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansOldPersian/hinted/ttf/NotoSansOldPersian-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansOriya/hinted/ttf/NotoSansOriya-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansPhagsPa/hinted/ttf/NotoSansPhagsPa-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansRejang/hinted/ttf/NotoSansRejang-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSaurashtra/hinted/ttf/NotoSansSaurashtra-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSharada/hinted/ttf/NotoSansSharada-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSiddham/hinted/ttf/NotoSansSiddham-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSinhala/hinted/ttf/NotoSansSinhala-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSoraSompeng/hinted/ttf/NotoSansSoraSompeng-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSoyombo/hinted/ttf/NotoSansSoyombo-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSundanese/hinted/ttf/NotoSansSundanese-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSylotiNagri/hinted/ttf/NotoSansSylotiNagri-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSyriac/hinted/ttf/NotoSansSyriac-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTagalog/hinted/ttf/NotoSansTagalog-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTagbanwa/hinted/ttf/NotoSansTagbanwa-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTaiLe/hinted/ttf/NotoSansTaiLe-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTaiTham/hinted/ttf/NotoSansTaiTham-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTaiViet/hinted/ttf/NotoSansTaiViet-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTakri/hinted/ttf/NotoSansTakri-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTamil/hinted/ttf/NotoSansTamil-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTelugu/hinted/ttf/NotoSansTelugu-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansThaana/hinted/ttf/NotoSansThaana-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansThai/hinted/ttf/NotoSansThai-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTirhuta/hinted/ttf/NotoSansTirhuta-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansWancho/hinted/ttf/NotoSansWancho-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansWarangCiti/hinted/ttf/NotoSansWarangCiti-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansZanabazarSquare/hinted/ttf/NotoSansZanabazarSquare-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerif/hinted/ttf/NotoSerif-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifAhom/hinted/ttf/NotoSerifAhom-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifBalinese/hinted/ttf/NotoSerifBalinese-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifDogra/hinted/ttf/NotoSerifDogra-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifGrantha/hinted/ttf/NotoSerifGrantha-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifGujarati/hinted/ttf/NotoSerifGujarati-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifKhmer/hinted/ttf/NotoSerifKhmer-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifTibetan/hinted/ttf/NotoSerifTibetan-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifHebrew/hinted/ttf/NotoSerifHebrew-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifKhojki/hinted/ttf/NotoSerifKhojki-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansUgaritic/hinted/ttf/NotoSansUgaritic-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSyriac/hinted/ttf/NotoSansSyriac-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSogdian/hinted/ttf/NotoSansSogdian-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansOldSogdian/hinted/ttf/NotoSansOldSogdian-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansOldSouthArabian/hinted/ttf/NotoSansOldSouthArabian-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSamaritan/hinted/ttf/NotoSansSamaritan-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansInscriptionalParthian/hinted/ttf/NotoSansInscriptionalParthian-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansPhoenician/hinted/ttf/NotoSansPhoenician-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansPsalterPahlavi/hinted/ttf/NotoSansPsalterPahlavi-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansInscriptionalPahlavi/hinted/ttf/NotoSansInscriptionalPahlavi-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansPalmyrene/hinted/ttf/NotoSansPalmyrene-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansNabataean/hinted/ttf/NotoSansNabataean-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansOldNorthArabian/hinted/ttf/NotoSansOldNorthArabian-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansManichaean/hinted/ttf/NotoSansManichaean-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansHatran/hinted/ttf/NotoSansHatran-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansElymaic/hinted/ttf/NotoSansElymaic-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansEgyptianHieroglyphs/hinted/ttf/NotoSansEgyptianHieroglyphs-Regular.ttf',
+  'https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansImperialAramaic/hinted/ttf/NotoSansImperialAramaic-Regular.ttf'
 ]
 
 
@@ -112,15 +113,13 @@ def downloadFiles():
     fontname = font.split('/')[-1].replace('?raw=true', '')
     print('Downloading ' + fontname + ' ' + str(len(fontlist) - i))
 
-    if 'Nastaliq' in font:
-      try:
-          r = requests.get(font)
-      except Exception:
-        print(i)
+    try:
+        r = requests.get(font)
+    except Exception:
+      print('Cannot download')
 
-      import time
-      with open('./' + fontname, 'wb') as f:
-        f.write(r.content)
+    with open('./' + fontname, 'wb') as f:
+      f.write(r.content)
 
 def mergeFiles():
   merger = mg.Merger()
@@ -149,13 +148,13 @@ def writeCSS():
     cssContent += '''
 @font-face {
   font-family: ''' + "'" + fontname + "'" + ''';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/''' + fontfilename + "'" + ''')
+  src: url(''' + "'" + font + "'" + ''')
 }
   '''
     cssContentMerged += '''
 @font-face {
   font-family: ''' + "'" + fontname + " '" + ''';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/''' + fontfilename + "'" + ''')
+  src: url(''' + "'" + font.replace('hinted', 'full') + "'" + ''')
 }
   '''
     with open('aksharamukha-notomirror.css', 'w') as f:
@@ -172,6 +171,6 @@ print('Starting font merging')
 print('Font merging complete')
 
 print('Creating CSS file')
-#writeCSS()
+writeCSS()
 print('Creating CSS file complete')
 

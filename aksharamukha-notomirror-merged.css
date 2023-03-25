@@ -1,496 +1,496 @@
 
 @font-face {
   font-family: 'Noto Nastaliq Urdu ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoNastaliqUrdu-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoNastaliqUrdu/full/ttf/NotoNastaliqUrdu-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSans-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSans/full/ttf/NotoSans-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Avestan ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansAvestan-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansAvestan/full/ttf/NotoSansAvestan-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Balinese ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansBalinese-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansBalinese/full/ttf/NotoSansBalinese-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Batak ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansBatak-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansBatak/full/ttf/NotoSansBatak-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Bengali ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansBengali-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansBengali/full/ttf/NotoSansBengali-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Bhaiksuki ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansBhaiksuki-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansBhaiksuki/full/ttf/NotoSansBhaiksuki-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Brahmi ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansBrahmi-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansBrahmi/full/ttf/NotoSansBrahmi-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Buginese ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansBuginese-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansBuginese/full/ttf/NotoSansBuginese-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Buhid ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansBuhid-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansBuhid/full/ttf/NotoSansBuhid-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Chakma ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansChakma-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansChakma/full/ttf/NotoSansChakma-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Cham ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansCham-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansCham/full/ttf/NotoSansCham-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Devanagari ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansDevanagari-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansDevanagari/full/ttf/NotoSansDevanagari-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Grantha ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansGrantha-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansGrantha/full/ttf/NotoSansGrantha-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Gujarati ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansGujarati-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansGujarati/full/ttf/NotoSansGujarati-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans GunjalaGondi ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansGunjalaGondi-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansGunjalaGondi/full/ttf/NotoSansGunjalaGondi-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Gurmukhi ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansGurmukhi-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansGurmukhi/full/ttf/NotoSansGurmukhi-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans HanifiRohingya ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansHanifiRohingya-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansHanifiRohingya/full/ttf/NotoSansHanifiRohingya-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Hanunoo ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansHanunoo-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansHanunoo/full/ttf/NotoSansHanunoo-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Javanese ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansJavanese-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansJavanese/full/ttf/NotoSansJavanese-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Kaithi ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansKaithi-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansKaithi/full/ttf/NotoSansKaithi-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Kannada ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansKannada-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansKannada/full/ttf/NotoSansKannada-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans KayahLi ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansKayahLi-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansKayahLi/full/ttf/NotoSansKayahLi-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Kharoshthi ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansKharoshthi-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansKharoshthi/full/ttf/NotoSansKharoshthi-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Khmer ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansKhmer-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansKhmer/full/ttf/NotoSansKhmer-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Khojki ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansKhojki-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansKhojki/full/ttf/NotoSansKhojki-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Khudawadi ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansKhudawadi-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansKhudawadi/full/ttf/NotoSansKhudawadi-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Lao ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansLao-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansLao/full/ttf/NotoSansLao-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Lepcha ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansLepcha-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansLepcha/full/ttf/NotoSansLepcha-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Limbu ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansLimbu-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansLimbu/full/ttf/NotoSansLimbu-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Lisu ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansLisu-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansLisu/full/ttf/NotoSansLisu-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Mahajani ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansMahajani-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMahajani/full/ttf/NotoSansMahajani-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Malayalam ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansMalayalam-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMalayalam/full/ttf/NotoSansMalayalam-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Marchen ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansMarchen-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMarchen/full/ttf/NotoSansMarchen-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans MasaramGondi ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansMasaramGondi-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMasaramGondi/full/ttf/NotoSansMasaramGondi-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans MeeteiMayek ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansMeeteiMayek-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMeeteiMayek/full/ttf/NotoSansMeeteiMayek-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Modi ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansModi-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansModi/full/ttf/NotoSansModi-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Mro ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansMro-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMro/full/ttf/NotoSansMro-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Multani ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansMultani-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMultani/full/ttf/NotoSansMultani-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Myanmar ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansMyanmar-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansMyanmar/full/ttf/NotoSansMyanmar-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Nandinagari ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansNandinagari-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansNandinagari/full/ttf/NotoSansNandinagari-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans NewTaiLue ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansNewTaiLue-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansNewTaiLue/full/ttf/NotoSansNewTaiLue-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Newa ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansNewa-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansNewa/full/ttf/NotoSansNewa-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans OlChiki ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansOlChiki-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansOlChiki/full/ttf/NotoSansOlChiki-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans OldPersian ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansOldPersian-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansOldPersian/full/ttf/NotoSansOldPersian-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Oriya ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansOriya-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansOriya/full/ttf/NotoSansOriya-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans PhagsPa ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansPhagsPa-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansPhagsPa/full/ttf/NotoSansPhagsPa-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Rejang ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansRejang-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansRejang/full/ttf/NotoSansRejang-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Saurashtra ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansSaurashtra-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSaurashtra/full/ttf/NotoSansSaurashtra-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Sharada ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansSharada-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSharada/full/ttf/NotoSansSharada-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Siddham ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansSiddham-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSiddham/full/ttf/NotoSansSiddham-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Sinhala ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansSinhala-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSinhala/full/ttf/NotoSansSinhala-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans SoraSompeng ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansSoraSompeng-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSoraSompeng/full/ttf/NotoSansSoraSompeng-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Soyombo ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansSoyombo-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSoyombo/full/ttf/NotoSansSoyombo-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Sundanese ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansSundanese-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSundanese/full/ttf/NotoSansSundanese-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans SylotiNagri ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansSylotiNagri-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSylotiNagri/full/ttf/NotoSansSylotiNagri-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Syriac ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansSyriac-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSyriac/full/ttf/NotoSansSyriac-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Tagalog ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansTagalog-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTagalog/full/ttf/NotoSansTagalog-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Tagbanwa ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansTagbanwa-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTagbanwa/full/ttf/NotoSansTagbanwa-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans TaiLe ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansTaiLe-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTaiLe/full/ttf/NotoSansTaiLe-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans TaiTham ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansTaiTham-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTaiTham/full/ttf/NotoSansTaiTham-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans TaiViet ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansTaiViet-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTaiViet/full/ttf/NotoSansTaiViet-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Takri ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansTakri-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTakri/full/ttf/NotoSansTakri-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Tamil ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansTamil-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTamil/full/ttf/NotoSansTamil-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Telugu ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansTelugu-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTelugu/full/ttf/NotoSansTelugu-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Thaana ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansThaana-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansThaana/full/ttf/NotoSansThaana-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Thai ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansThai-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansThai/full/ttf/NotoSansThai-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Tirhuta ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansTirhuta-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansTirhuta/full/ttf/NotoSansTirhuta-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Wancho ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansWancho-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansWancho/full/ttf/NotoSansWancho-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans WarangCiti ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansWarangCiti-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansWarangCiti/full/ttf/NotoSansWarangCiti-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans ZanabazarSquare ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansZanabazarSquare-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansZanabazarSquare/full/ttf/NotoSansZanabazarSquare-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Serif ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSerif-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerif/full/ttf/NotoSerif-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Serif Ahom ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSerifAhom-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifAhom/full/ttf/NotoSerifAhom-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Serif Balinese ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSerifBalinese-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifBalinese/full/ttf/NotoSerifBalinese-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Serif Dogra ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSerifDogra-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifDogra/full/ttf/NotoSerifDogra-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Serif Grantha ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSerifGrantha-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifGrantha/full/ttf/NotoSerifGrantha-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Serif Gujarati ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSerifGujarati-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifGujarati/full/ttf/NotoSerifGujarati-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Serif Khmer ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSerifKhmer-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifKhmer/full/ttf/NotoSerifKhmer-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Serif Tibetan ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSerifTibetan-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifTibetan/full/ttf/NotoSerifTibetan-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Serif Hebrew ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSerifHebrew-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifHebrew/full/ttf/NotoSerifHebrew-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Serif Khojki ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSerifKhojki-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifKhojki/full/ttf/NotoSerifKhojki-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Ugaritic ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansUgaritic-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansUgaritic/full/ttf/NotoSansUgaritic-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Syriac ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansSyriac-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSyriac/full/ttf/NotoSansSyriac-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Sogdian ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansSogdian-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSogdian/full/ttf/NotoSansSogdian-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans OldSogdian ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansOldSogdian-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansOldSogdian/full/ttf/NotoSansOldSogdian-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans OldSouthArabian ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansOldSouthArabian-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansOldSouthArabian/full/ttf/NotoSansOldSouthArabian-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Samaritan ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansSamaritan-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansSamaritan/full/ttf/NotoSansSamaritan-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans InscriptionalParthian ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansInscriptionalParthian-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansInscriptionalParthian/full/ttf/NotoSansInscriptionalParthian-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Phoenician ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansPhoenician-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansPhoenician/full/ttf/NotoSansPhoenician-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans PsalterPahlavi ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansPsalterPahlavi-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansPsalterPahlavi/full/ttf/NotoSansPsalterPahlavi-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans InscriptionalPahlavi ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansInscriptionalPahlavi-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansInscriptionalPahlavi/full/ttf/NotoSansInscriptionalPahlavi-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Palmyrene ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansPalmyrene-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansPalmyrene/full/ttf/NotoSansPalmyrene-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Nabataean ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansNabataean-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansNabataean/full/ttf/NotoSansNabataean-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans OldNorthArabian ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansOldNorthArabian-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansOldNorthArabian/full/ttf/NotoSansOldNorthArabian-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Manichaean ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansManichaean-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansManichaean/full/ttf/NotoSansManichaean-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Hatran ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansHatran-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansHatran/full/ttf/NotoSansHatran-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans Elymaic ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansElymaic-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansElymaic/full/ttf/NotoSansElymaic-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans EgyptianHieroglyphs ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansEgyptianHieroglyphs-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansEgyptianHieroglyphs/full/ttf/NotoSansEgyptianHieroglyphs-Regular.ttf')
 }
   
 @font-face {
   font-family: 'Noto Sans ImperialAramaic ';
-  src: url('https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha-notomirror/merged/NotoSansImperialAramaic-Regular.ttf')
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansImperialAramaic/full/ttf/NotoSansImperialAramaic-Regular.ttf')
 }
   
