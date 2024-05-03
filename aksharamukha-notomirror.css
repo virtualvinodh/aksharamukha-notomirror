@@ -115,6 +115,11 @@
 }
 
 @font-face {
+  font-family: 'Noto Serif DivesAkuru';
+  src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSerifDivesAkuru/hinted/ttf/NotoSerifDivesAkuru-Regular.ttf')
+}
+
+@font-face {
   font-family: 'Noto Sans Kannada';
   src: url('https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoSansKannada/hinted/ttf/NotoSansKannada-Regular.ttf')
 }
